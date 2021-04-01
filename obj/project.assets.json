@@ -1,0 +1,763 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AtkSharp/3.22.25.128": {
+        "type": "package",
+        "dependencies": {
+          "GLibSharp": "3.22.25.128"
+        },
+        "compile": {
+          "lib/netstandard2.0/AtkSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AtkSharp.dll": {}
+        }
+      },
+      "CairoSharp/3.22.25.128": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/CairoSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CairoSharp.dll": {}
+        }
+      },
+      "CSFML/2.5.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/alpine-x64/native/libcsfml-audio.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libcsfml-graphics.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libcsfml-system.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libcsfml-window.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-audio.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-audio.so.2.5": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-audio.so.2.5.1": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-graphics.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-graphics.so.2.5": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-graphics.so.2.5.1": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-system.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-system.so.2.5": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-system.so.2.5.1": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-window.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-window.so.2.5": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/alpine-x64/native/libsfml-window.so.2.5.1": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/debian-x64/native/libcsfml-audio.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libcsfml-graphics.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libcsfml-system.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libcsfml-window.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-audio.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-audio.so.2.5": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-audio.so.2.5.1": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-graphics.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-graphics.so.2.5": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-graphics.so.2.5.1": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-system.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-system.so.2.5": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-system.so.2.5.1": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-window.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-window.so.2.5": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/debian-x64/native/libsfml-window.so.2.5.1": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/fedora-x64/native/libcsfml-audio.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libcsfml-graphics.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libcsfml-system.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libcsfml-window.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-audio.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-audio.so.2.5": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-audio.so.2.5.1": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-graphics.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-graphics.so.2.5": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-graphics.so.2.5.1": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-system.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-system.so.2.5": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-system.so.2.5.1": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-window.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-window.so.2.5": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/fedora-x64/native/libsfml-window.so.2.5.1": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/win-x64/native/csfml-Audio.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/csfml-Graphics.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/csfml-System.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/csfml-Window.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/openal32.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/csfml-Audio.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/csfml-Graphics.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/csfml-System.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/csfml-Window.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/openal32.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "GdkSharp/3.22.25.128": {
+        "type": "package",
+        "dependencies": {
+          "CairoSharp": "3.22.25.128",
+          "GLibSharp": "3.22.25.128",
+          "GioSharp": "3.22.25.128",
+          "PangoSharp": "3.22.25.128"
+        },
+        "compile": {
+          "lib/netstandard2.0/GdkSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GdkSharp.dll": {}
+        }
+      },
+      "GioSharp/3.22.25.128": {
+        "type": "package",
+        "dependencies": {
+          "GLibSharp": "3.22.25.128"
+        },
+        "compile": {
+          "lib/netstandard2.0/GioSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GioSharp.dll": {}
+        }
+      },
+      "GLibSharp/3.22.25.128": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GLibSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GLibSharp.dll": {}
+        }
+      },
+      "GtkSharp/3.22.25.128": {
+        "type": "package",
+        "dependencies": {
+          "AtkSharp": "3.22.25.128",
+          "CairoSharp": "3.22.25.128",
+          "GLibSharp": "3.22.25.128",
+          "GdkSharp": "3.22.25.128",
+          "GioSharp": "3.22.25.128",
+          "PangoSharp": "3.22.25.128"
+        },
+        "compile": {
+          "lib/netstandard2.0/GtkSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GtkSharp.dll": {}
+        },
+        "build": {
+          "build/GtkSharp.targets": {}
+        }
+      },
+      "MP3Sharp/1.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MP3Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MP3Sharp.dll": {}
+        }
+      },
+      "PangoSharp/3.22.25.128": {
+        "type": "package",
+        "dependencies": {
+          "CairoSharp": "3.22.25.128",
+          "GLibSharp": "3.22.25.128"
+        },
+        "compile": {
+          "lib/netstandard2.0/PangoSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PangoSharp.dll": {}
+        }
+      },
+      "SFML.Audio/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "CSFML": "2.5.0",
+          "SFML.Graphics": "2.5.0",
+          "SFML.System": "2.5.0",
+          "SFML.Window": "2.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SFML.Audio.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.Audio.dll": {}
+        }
+      },
+      "SFML.Graphics/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "CSFML": "2.5.0",
+          "SFML.System": "2.5.0",
+          "SFML.Window": "2.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SFML.Graphics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.Graphics.dll": {}
+        }
+      },
+      "SFML.Net/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "SFML.Audio": "2.5.0",
+          "SFML.Graphics": "2.5.0",
+          "SFML.System": "2.5.0",
+          "SFML.Window": "2.5.0"
+        }
+      },
+      "SFML.System/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "CSFML": "2.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SFML.System.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.System.dll": {}
+        }
+      },
+      "SFML.Window/2.5.0": {
+        "type": "package",
+        "dependencies": {
+          "CSFML": "2.5.0",
+          "SFML.System": "2.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SFML.Window.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SFML.Window.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AtkSharp/3.22.25.128": {
+      "sha512": "3O7BNm+JbFz9BffwOE1cM6/86wYyZIvjQe2doNJIlVXX/tdSU92dwNHhAI+sa7MGCvXJe0QvsKN7AHCu6b+4AA==",
+      "type": "package",
+      "path": "atksharp/3.22.25.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "atksharp.3.22.25.128.nupkg.sha512",
+        "atksharp.nuspec",
+        "lib/netstandard2.0/AtkSharp.dll"
+      ]
+    },
+    "CairoSharp/3.22.25.128": {
+      "sha512": "Y6J3Dp6FVvcdICHXsR97OfiE8GjsiC2FgIpJyGCMGg74JqqWh8BZwPmS+CjksFTDQkuhwFjJqeXvbeOdx5GL1Q==",
+      "type": "package",
+      "path": "cairosharp/3.22.25.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cairosharp.3.22.25.128.nupkg.sha512",
+        "cairosharp.nuspec",
+        "lib/netstandard2.0/CairoSharp.dll"
+      ]
+    },
+    "CSFML/2.5.0": {
+      "sha512": "A3X+zyjAtvIQkpwCSS/F5fDOFRWeT+USIAK+DhGujNufF+qV1ty5cYGJihmmGeokX3yd89uZoNH8mcsmXCY/yw==",
+      "type": "package",
+      "path": "csfml/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "csfml.2.5.0.nupkg.sha512",
+        "csfml.nuspec",
+        "runtimes/alpine-x64/native/libcsfml-audio.so",
+        "runtimes/alpine-x64/native/libcsfml-graphics.so",
+        "runtimes/alpine-x64/native/libcsfml-system.so",
+        "runtimes/alpine-x64/native/libcsfml-window.so",
+        "runtimes/alpine-x64/native/libsfml-audio.so",
+        "runtimes/alpine-x64/native/libsfml-audio.so.2.5",
+        "runtimes/alpine-x64/native/libsfml-audio.so.2.5.1",
+        "runtimes/alpine-x64/native/libsfml-graphics.so",
+        "runtimes/alpine-x64/native/libsfml-graphics.so.2.5",
+        "runtimes/alpine-x64/native/libsfml-graphics.so.2.5.1",
+        "runtimes/alpine-x64/native/libsfml-system.so",
+        "runtimes/alpine-x64/native/libsfml-system.so.2.5",
+        "runtimes/alpine-x64/native/libsfml-system.so.2.5.1",
+        "runtimes/alpine-x64/native/libsfml-window.so",
+        "runtimes/alpine-x64/native/libsfml-window.so.2.5",
+        "runtimes/alpine-x64/native/libsfml-window.so.2.5.1",
+        "runtimes/debian-x64/native/libcsfml-audio.so",
+        "runtimes/debian-x64/native/libcsfml-graphics.so",
+        "runtimes/debian-x64/native/libcsfml-system.so",
+        "runtimes/debian-x64/native/libcsfml-window.so",
+        "runtimes/debian-x64/native/libsfml-audio.so",
+        "runtimes/debian-x64/native/libsfml-audio.so.2.5",
+        "runtimes/debian-x64/native/libsfml-audio.so.2.5.1",
+        "runtimes/debian-x64/native/libsfml-graphics.so",
+        "runtimes/debian-x64/native/libsfml-graphics.so.2.5",
+        "runtimes/debian-x64/native/libsfml-graphics.so.2.5.1",
+        "runtimes/debian-x64/native/libsfml-system.so",
+        "runtimes/debian-x64/native/libsfml-system.so.2.5",
+        "runtimes/debian-x64/native/libsfml-system.so.2.5.1",
+        "runtimes/debian-x64/native/libsfml-window.so",
+        "runtimes/debian-x64/native/libsfml-window.so.2.5",
+        "runtimes/debian-x64/native/libsfml-window.so.2.5.1",
+        "runtimes/fedora-x64/native/libcsfml-audio.so",
+        "runtimes/fedora-x64/native/libcsfml-graphics.so",
+        "runtimes/fedora-x64/native/libcsfml-system.so",
+        "runtimes/fedora-x64/native/libcsfml-window.so",
+        "runtimes/fedora-x64/native/libsfml-audio.so",
+        "runtimes/fedora-x64/native/libsfml-audio.so.2.5",
+        "runtimes/fedora-x64/native/libsfml-audio.so.2.5.1",
+        "runtimes/fedora-x64/native/libsfml-graphics.so",
+        "runtimes/fedora-x64/native/libsfml-graphics.so.2.5",
+        "runtimes/fedora-x64/native/libsfml-graphics.so.2.5.1",
+        "runtimes/fedora-x64/native/libsfml-system.so",
+        "runtimes/fedora-x64/native/libsfml-system.so.2.5",
+        "runtimes/fedora-x64/native/libsfml-system.so.2.5.1",
+        "runtimes/fedora-x64/native/libsfml-window.so",
+        "runtimes/fedora-x64/native/libsfml-window.so.2.5",
+        "runtimes/fedora-x64/native/libsfml-window.so.2.5.1",
+        "runtimes/win-x64/native/csfml-Audio.dll",
+        "runtimes/win-x64/native/csfml-Graphics.dll",
+        "runtimes/win-x64/native/csfml-System.dll",
+        "runtimes/win-x64/native/csfml-Window.dll",
+        "runtimes/win-x64/native/openal32.dll",
+        "runtimes/win-x86/native/csfml-Audio.dll",
+        "runtimes/win-x86/native/csfml-Graphics.dll",
+        "runtimes/win-x86/native/csfml-System.dll",
+        "runtimes/win-x86/native/csfml-Window.dll",
+        "runtimes/win-x86/native/openal32.dll"
+      ]
+    },
+    "GdkSharp/3.22.25.128": {
+      "sha512": "2PKpfl4z4ZakhVXMY3Cg+ulFhaxA1a2QvzIrFWOVxB1ympgjRBnXe4jLy131dicHwn6EDuNORihlJ/VukiyxoQ==",
+      "type": "package",
+      "path": "gdksharp/3.22.25.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gdksharp.3.22.25.128.nupkg.sha512",
+        "gdksharp.nuspec",
+        "lib/netstandard2.0/GdkSharp.dll"
+      ]
+    },
+    "GioSharp/3.22.25.128": {
+      "sha512": "mPKl15WEONpvM52aIwLrSOL3Co3AEfbaiHz4hcEWVQNthxoL/9K9YOlPMLYzKy8+X4HiwDJAjhwpHd1IoBVE7A==",
+      "type": "package",
+      "path": "giosharp/3.22.25.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "giosharp.3.22.25.128.nupkg.sha512",
+        "giosharp.nuspec",
+        "lib/netstandard2.0/GioSharp.dll"
+      ]
+    },
+    "GLibSharp/3.22.25.128": {
+      "sha512": "WjEF7d/Bltk9rntiV1P3ohhAGyZrcQ1JWgJQ2dDjceC8Y4fBPPrY7NaHUzntNHJTu2vJeVqdvae8ufhdM34xQQ==",
+      "type": "package",
+      "path": "glibsharp/3.22.25.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "glibsharp.3.22.25.128.nupkg.sha512",
+        "glibsharp.nuspec",
+        "lib/netstandard2.0/GLibSharp.dll"
+      ]
+    },
+    "GtkSharp/3.22.25.128": {
+      "sha512": "pdQgKKv8IzMYW3dVTQx1yCRcnq2dSHnnfLVwFvtkEHdobmgGb7sVeC4ghPBmPOfAjYgD2vTEb6yyZAWgSyLrzQ==",
+      "type": "package",
+      "path": "gtksharp/3.22.25.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/GtkSharp.targets",
+        "gtksharp.3.22.25.128.nupkg.sha512",
+        "gtksharp.nuspec",
+        "lib/netstandard2.0/GtkSharp.dll"
+      ]
+    },
+    "MP3Sharp/1.0.5": {
+      "sha512": "KyGy1ZBVEXfovHdJRY8NzjWZBdL75PSx+13KW720JuUTKyWbDCHk0jgjif9b62UPnBZu5V/ZB+tpHWcPhoZS8Q==",
+      "type": "package",
+      "path": "mp3sharp/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/MP3Sharp.dll",
+        "lib/netstandard2.0/MP3Sharp.pdb",
+        "mp3sharp.1.0.5.nupkg.sha512",
+        "mp3sharp.nuspec",
+        "src/MP3Sharp/Buffer16BitStereo.cs",
+        "src/MP3Sharp/Decoding/ABuffer.cs",
+        "src/MP3Sharp/Decoding/BitReserve.cs",
+        "src/MP3Sharp/Decoding/Bitstream.cs",
+        "src/MP3Sharp/Decoding/BitstreamErrors.cs",
+        "src/MP3Sharp/Decoding/BitstreamException.cs",
+        "src/MP3Sharp/Decoding/CircularByteBuffer.cs",
+        "src/MP3Sharp/Decoding/Crc16.cs",
+        "src/MP3Sharp/Decoding/Decoder.cs",
+        "src/MP3Sharp/Decoding/DecoderErrors.cs",
+        "src/MP3Sharp/Decoding/DecoderException.cs",
+        "src/MP3Sharp/Decoding/Decoders/ASubband.cs",
+        "src/MP3Sharp/Decoding/Decoders/IFrameDecoder.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerI/SubbandLayer1.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerI/SubbandLayer1IntensityStereo.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerI/SubbandLayer1Stereo.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIDecoder.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerII/SubbandLayer2.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerII/SubbandLayer2IntensityStereo.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerII/SubbandLayer2Stereo.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIIDecoder.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIII/ChannelData.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIII/GranuleInfo.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIII/Layer3SideInfo.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIII/SBI.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIII/ScaleFactorData.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIII/ScaleFactorTable.cs",
+        "src/MP3Sharp/Decoding/Decoders/LayerIIIDecoder.cs",
+        "src/MP3Sharp/Decoding/Equalizer.cs",
+        "src/MP3Sharp/Decoding/Header.cs",
+        "src/MP3Sharp/Decoding/Huffman.cs",
+        "src/MP3Sharp/Decoding/OutputChannels.cs",
+        "src/MP3Sharp/Decoding/OutputChannelsEnum.cs",
+        "src/MP3Sharp/Decoding/PushbackStream.cs",
+        "src/MP3Sharp/Decoding/SampleBuffer.cs",
+        "src/MP3Sharp/Decoding/SynthesisFilter.cs",
+        "src/MP3Sharp/IO/RandomAccessFileStream.cs",
+        "src/MP3Sharp/IO/RiffFile.cs",
+        "src/MP3Sharp/IO/WaveFile.cs",
+        "src/MP3Sharp/IO/WaveFileBuffer.cs",
+        "src/MP3Sharp/MP3Sharp.csproj",
+        "src/MP3Sharp/MP3SharpException.cs",
+        "src/MP3Sharp/MP3Stream.cs",
+        "src/MP3Sharp/SoundFormat.cs",
+        "src/MP3Sharp/Support/SupportClass.cs"
+      ]
+    },
+    "PangoSharp/3.22.25.128": {
+      "sha512": "j3dm93MzUFJhCp0ecaxzDc+JZ8OAIwGeERp8GKVCNLxbdxDi68VYFI5iSZPNca091cO5Zo5IT5eeaWoyIwXR9g==",
+      "type": "package",
+      "path": "pangosharp/3.22.25.128",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/PangoSharp.dll",
+        "pangosharp.3.22.25.128.nupkg.sha512",
+        "pangosharp.nuspec"
+      ]
+    },
+    "SFML.Audio/2.5.0": {
+      "sha512": "M5EIksRefT3nsLT32oEpESStsnlixR+YjKS6fUMl+vDQ3gdMaV4jc84pg3kbfM9w4RYKAyH6OWV4bzDU5FNZyA==",
+      "type": "package",
+      "path": "sfml.audio/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SFML.Audio.dll",
+        "lib/netstandard2.0/SFML.Audio.xml",
+        "sfml.audio.2.5.0.nupkg.sha512",
+        "sfml.audio.nuspec"
+      ]
+    },
+    "SFML.Graphics/2.5.0": {
+      "sha512": "77Nuz0qmK2q2+901J0439LC6qFNw5VT0qjqqA7zSaM0WrV7K/UozBjfO/ROCY0iW+w7IEqPYiXBK4A7xO5nvsQ==",
+      "type": "package",
+      "path": "sfml.graphics/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SFML.Graphics.dll",
+        "lib/netstandard2.0/SFML.Graphics.xml",
+        "sfml.graphics.2.5.0.nupkg.sha512",
+        "sfml.graphics.nuspec"
+      ]
+    },
+    "SFML.Net/2.5.0": {
+      "sha512": "XVxrtNX6FJOpI7OzsTlKUKI92C8CKVe1rYtNbyj9fdIdZgidwpK/kExhxH5XYxpJ5C1/EUsGdOrGx4BCfsQvbw==",
+      "type": "package",
+      "path": "sfml.net/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "sfml.net.2.5.0.nupkg.sha512",
+        "sfml.net.nuspec"
+      ]
+    },
+    "SFML.System/2.5.0": {
+      "sha512": "vdlmLjPRhOD25WX/L2wP3F9dg/3mTj6hhyHkqtleC0fA5WNr71F0ijLbvs32BBpow5OoyU7BryKMjy1WNmU0GQ==",
+      "type": "package",
+      "path": "sfml.system/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SFML.System.dll",
+        "lib/netstandard2.0/SFML.System.xml",
+        "sfml.system.2.5.0.nupkg.sha512",
+        "sfml.system.nuspec"
+      ]
+    },
+    "SFML.Window/2.5.0": {
+      "sha512": "KuQvC0TrsxzhFJw9hDvMAzKD8/12jvXjP7sC3UO5MSM0sy5sfYNTqQktnQ3ELAV+rP1cqRKLsvosBfMfl1HkRw==",
+      "type": "package",
+      "path": "sfml.window/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SFML.Window.dll",
+        "lib/netstandard2.0/SFML.Window.xml",
+        "sfml.window.2.5.0.nupkg.sha512",
+        "sfml.window.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "GtkSharp >= 3.22.25.*",
+      "MP3Sharp >= 1.0.5",
+      "SFML.Net >= 2.5.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/pasha/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/pasha/Projects/dotnet/SharpPlayer/SharpPlayer.csproj",
+      "projectName": "SharpPlayer",
+      "projectPath": "/home/pasha/Projects/dotnet/SharpPlayer/SharpPlayer.csproj",
+      "packagesPath": "/home/pasha/.nuget/packages/",
+      "outputPath": "/home/pasha/Projects/dotnet/SharpPlayer/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/home/pasha/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "GtkSharp": {
+            "target": "Package",
+            "version": "[3.22.25.*, )"
+          },
+          "MP3Sharp": {
+            "target": "Package",
+            "version": "[1.0.5, )"
+          },
+          "SFML.Net": {
+            "target": "Package",
+            "version": "[2.5.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

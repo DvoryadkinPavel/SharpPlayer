@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "yzZfjF74gwkmK7UCetwfDkcGEXyqX5pzK82RZH9o5iumqpyHUcLhPSC64UoaJLGGHO6mPou5Xnll8OK3Vp0jNQ==",
+  "success": true,
+  "projectFilePath": "/home/pasha/Projects/dotnet/SharpPlayer/SharpPlayer.csproj",
+  "expectedPackageFiles": [
+    "/home/pasha/.nuget/packages/atksharp/3.22.25.128/atksharp.3.22.25.128.nupkg.sha512",
+    "/home/pasha/.nuget/packages/cairosharp/3.22.25.128/cairosharp.3.22.25.128.nupkg.sha512",
+    "/home/pasha/.nuget/packages/csfml/2.5.0/csfml.2.5.0.nupkg.sha512",
+    "/home/pasha/.nuget/packages/gdksharp/3.22.25.128/gdksharp.3.22.25.128.nupkg.sha512",
+    "/home/pasha/.nuget/packages/giosharp/3.22.25.128/giosharp.3.22.25.128.nupkg.sha512",
+    "/home/pasha/.nuget/packages/glibsharp/3.22.25.128/glibsharp.3.22.25.128.nupkg.sha512",
+    "/home/pasha/.nuget/packages/gtksharp/3.22.25.128/gtksharp.3.22.25.128.nupkg.sha512",
+    "/home/pasha/.nuget/packages/mp3sharp/1.0.5/mp3sharp.1.0.5.nupkg.sha512",
+    "/home/pasha/.nuget/packages/pangosharp/3.22.25.128/pangosharp.3.22.25.128.nupkg.sha512",
+    "/home/pasha/.nuget/packages/sfml.audio/2.5.0/sfml.audio.2.5.0.nupkg.sha512",
+    "/home/pasha/.nuget/packages/sfml.graphics/2.5.0/sfml.graphics.2.5.0.nupkg.sha512",
+    "/home/pasha/.nuget/packages/sfml.net/2.5.0/sfml.net.2.5.0.nupkg.sha512",
+    "/home/pasha/.nuget/packages/sfml.system/2.5.0/sfml.system.2.5.0.nupkg.sha512",
+    "/home/pasha/.nuget/packages/sfml.window/2.5.0/sfml.window.2.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
