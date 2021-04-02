@@ -1,4 +1,3 @@
-using System;
 using SFML.Audio;
 
 namespace AudioEngine
@@ -9,11 +8,20 @@ namespace AudioEngine
         private Sound _sound;
         public AudioPlayer(string fileName)
         {
-            _fileName = fileName;
-            _buffer = new SoundBuffer(fileName);
-            _sound = new Sound();
-            _sound.SoundBuffer = _buffer;
+            if(!fileName.Contains(".mp3"))
+            {
+                _fileName = fileName;
+                _buffer = new SoundBuffer(fileName);
+                _sound = new Sound();
+                _sound.SoundBuffer = _buffer;                
+            }
+            else
+            {
+         
+       
+            }
         }
+        
         private string _fileName;
         public string FileName
         {
@@ -73,5 +81,5 @@ namespace AudioEngine
                 return false;
             }
         }
-    }
+    }    
 }
