@@ -1,26 +1,53 @@
+using System.Transactions;
+using System;
+using System.Diagnostics;
 using SFML.Audio;
 
 namespace AudioEngine
 {
     public class AudioPlayer
     {
+        private string _directory;
         private SoundBuffer _buffer;
         private Sound _sound;
         public AudioPlayer(string fileName)
         {
+            _fileName = fileName;
+            _directory = Environment.CurrentDirectory;
             if(!fileName.Contains(".mp3"))
-            {
-                _fileName = fileName;
+            {                
                 _buffer = new SoundBuffer(fileName);
-                _sound = new Sound();
-                _sound.SoundBuffer = _buffer;                
+                              
             }
             else
             {
-                     
+                LoadToBuffer(fileName);
+                _buffer = new SoundBuffer("buffer.ogg"); 
             }
+            _sound = new Sound();
+            _sound.SoundBuffer = _buffer;  
         }
-        
+        private void LoadToBuffer(string fileName)
+        {
+            string program = "ffmpeg";
+                var pi = new ProcessStartInfo("/bin/bash")
+                {
+                    Arguments = $"-y -i \"{fileName}\" buffer.ogg",
+                    WorkingDirectory = _directory,
+                    FileName = "ffmpeg",
+                    Verb = "OPEN",
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false
+                };
+                Process p = new Process();
+                p.StartInfo = pi;
+                p.Start();
+                String error = p.StandardError.ReadToEnd();
+                String output = p.StandardOutput.ReadToEnd() + pi.ToString();
+                p.WaitForExit();     
+        }
         private string _fileName;
         public string FileName
         {
