@@ -35,8 +35,15 @@ namespace SharpPlayer
         }
         private void LoadFile(string fileName = "audio.wav")
         {
-            _player = new AudioPlayer(fileName);
-            _labelFileName.Text = fileName;
+            try
+            {
+                _player = new AudioPlayer(fileName);
+                _labelFileName.Text = fileName;
+            }
+            catch(Exception ex)
+            {
+                _labelFileName.Text = $"Не удалось загрузить файл : {ex.Message}";
+            }
         }
         private void ButtonPlay_Clicked(object sender, EventArgs a)
         {
@@ -60,7 +67,7 @@ namespace SharpPlayer
 
 			Gtk.ResponseType response = (Gtk.ResponseType) fcd.Run ();
 			if (response == Gtk.ResponseType.Ok)
-                if(_labelFileName.Text != "Выберете файл") _player.Stop();
+                if(_player != null) _player.Stop();
 				LoadFile(fcd.Filename);
 			fcd.Dispose ();
 
