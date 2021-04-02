@@ -23,7 +23,7 @@
           <object class="GtkLabel" id="_labelFileName">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Hello World!</property>
+            <property name="label" translatable="yes">Выберете файл</property>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -33,7 +33,7 @@
         </child>
         <child>
           <object class="GtkButton" id="_buttonPlay">
-            <property name="label" translatable="yes">Play</property>
+            <property name="label" translatable="yes">Воспроизвести</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="receives_default">True</property>
@@ -46,7 +46,7 @@
         </child>
         <child>
           <object class="GtkButton" id="_buttonPause">
-            <property name="label" translatable="yes">Pause</property>
+            <property name="label" translatable="yes">Пауза</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="receives_default">True</property>
@@ -59,7 +59,7 @@
         </child>
         <child>
           <object class="GtkButton" id="_buttonStop">
-            <property name="label" translatable="yes">Stop</property>
+            <property name="label" translatable="yes">Остановить</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="receives_default">True</property>
@@ -72,7 +72,7 @@
         </child>
         <child>
           <object class="GtkButton" id="_buttonOpen">
-            <property name="label" translatable="yes">Open</property>
+            <property name="label" translatable="yes">Выбрать</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="receives_default">True</property>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yzZfjF74gwkmK7UCetwfDkcGEXyqX5pzK82RZH9o5iumqpyHUcLhPSC64UoaJLGGHO6mPou5Xnll8OK3Vp0jNQ==",
+  "dgSpecHash": "8ybeF8sHovwkq/3eSGsXzugjfw0rOtF7hvUUW1/jOQj+zpQD4X8DE9vmEUtPQUsI79eM6r98DK19Gtr0CL0u2Q==",
   "success": true,
   "projectFilePath": "/home/pasha/Projects/dotnet/SharpPlayer/SharpPlayer.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,6 @@
     "/home/pasha/.nuget/packages/giosharp/3.22.25.128/giosharp.3.22.25.128.nupkg.sha512",
     "/home/pasha/.nuget/packages/glibsharp/3.22.25.128/glibsharp.3.22.25.128.nupkg.sha512",
     "/home/pasha/.nuget/packages/gtksharp/3.22.25.128/gtksharp.3.22.25.128.nupkg.sha512",
-    "/home/pasha/.nuget/packages/mp3sharp/1.0.5/mp3sharp.1.0.5.nupkg.sha512",
     "/home/pasha/.nuget/packages/pangosharp/3.22.25.128/pangosharp.3.22.25.128.nupkg.sha512",
     "/home/pasha/.nuget/packages/sfml.audio/2.5.0/sfml.audio.2.5.0.nupkg.sha512",
     "/home/pasha/.nuget/packages/sfml.graphics/2.5.0/sfml.graphics.2.5.0.nupkg.sha512",

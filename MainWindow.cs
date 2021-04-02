@@ -26,7 +26,7 @@ namespace SharpPlayer
             _buttonPause.Clicked += ButtonPause_Clicked;
             _buttonStop.Clicked += ButtonStop_Clicked;
             _buttonOpen.Clicked += ButtonOpen_Clicked;
-            LoadFile();
+            _labelFileName.Text = "Выберете файл";
         }
 
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
@@ -40,15 +40,15 @@ namespace SharpPlayer
         }
         private void ButtonPlay_Clicked(object sender, EventArgs a)
         {
-            _player.Play();
+            if(_labelFileName.Text != "Выберете файл") _player.Play();
         }
         private void ButtonPause_Clicked(object sender, EventArgs a)
         {
-            _player.Pause();
+            if(_labelFileName.Text != "Выберете файл") _player.Pause();
         }
         private void ButtonStop_Clicked(object sender, EventArgs a)
         {
-            _player.Stop();
+            if(_labelFileName.Text != "Выберете файл") _player.Stop();
         }
         private void ButtonOpen_Clicked(object sender, EventArgs a)
         {
@@ -60,7 +60,7 @@ namespace SharpPlayer
 
 			Gtk.ResponseType response = (Gtk.ResponseType) fcd.Run ();
 			if (response == Gtk.ResponseType.Ok)
-                _player.Stop();
+                if(_labelFileName.Text != "Выберете файл") _player.Stop();
 				LoadFile(fcd.Filename);
 			fcd.Dispose ();
 

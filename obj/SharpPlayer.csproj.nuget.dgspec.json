@@ -20,14 +20,14 @@
           "/home/pasha/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -38,16 +38,12 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "GtkSharp": {
               "target": "Package",
               "version": "[3.22.25.*, )"
-            },
-            "MP3Sharp": {
-              "target": "Package",
-              "version": "[1.0.5, )"
             },
             "SFML.Net": {
               "target": "Package",
