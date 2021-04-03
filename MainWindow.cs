@@ -1,8 +1,10 @@
+using System.Linq;
 using System.Threading.Tasks;
 using System;
 using Gtk;
 using UI = Gtk.Builder.ObjectAttribute;
 using AudioEngine;
+using System.Collections.Generic;
 
 namespace SharpPlayer
 {
@@ -16,6 +18,9 @@ namespace SharpPlayer
         [UI] private Button _buttonOpen = null;
         [UI] private Scrollbar _scroll = null;
         private AudioPlayer _player;
+        private List<string> _playlist;
+        private int _currentIndex;
+        private bool _isPlaying;
 
         public MainWindow() : this(new Builder("MainWindow.glade")) { }
 
@@ -60,6 +65,7 @@ namespace SharpPlayer
                 _labelFileName.Text = fileName;
                 _scroll.SetRange(0,_player.Duration);
                 _player.Play();
+                _isPlaying = true;
             }
             catch(Exception ex)
             {
@@ -77,6 +83,7 @@ namespace SharpPlayer
         private void ButtonStop_Clicked(object sender, EventArgs a)
         {
             if(_labelFileName.Text != "Выберете файл") _player.Stop();
+            _isPlaying = false;
         }
         private void ButtonOpen_Clicked(object sender, EventArgs a)
         {
@@ -84,16 +91,18 @@ namespace SharpPlayer
 			fcd.AddButton (Gtk.Stock.Cancel, Gtk.ResponseType.Cancel);
 			fcd.AddButton (Gtk.Stock.Open, Gtk.ResponseType.Ok);
 			fcd.DefaultResponse = Gtk.ResponseType.Ok;
-			fcd.SelectMultiple = false;
+			fcd.SelectMultiple = true;
 			Gtk.ResponseType response = (Gtk.ResponseType) fcd.Run ();
 			if (response == Gtk.ResponseType.Ok) 
-            {           
+            {     
+                _playlist = fcd.Filenames.ToList();
                 if(_player != null) 
                 {
                     _player.Stop();
                     _player = null;
                 }
-                new Task(() => LoadFile(fcd.Filename)).Start();
+                new Task(() => LoadFile(_playlist.First())).Start();
+                _currentIndex = 0;
                 fcd.Dispose ();
             }
 			
@@ -105,11 +114,16 @@ namespace SharpPlayer
             while(true)
             {
                 if((_player != null) && (_player.Duration != 0))
-                {             
+                {     
+                    if(_isPlaying && _player.IsStopped && (_currentIndex < (_playlist.Count-1)))
+                    {
+                        _currentIndex++;
+                        LoadFile(_playlist.ElementAt(_currentIndex));
+                    }        
                     var position = _player.Position; 
                     _scroll.Adjustment.Value = position;                    
-                    _timePosition.Text = $"{Minutes(position).ToString("00")}:{Seconds(position).ToString("00")}";
-                }
+                    _timePosition.Text = $"{Minutes(position).ToString("00")}:{Seconds(position).ToString("00")}";                    
+                }                
                 System.Threading.Thread.Sleep(1000);
             }
         }
