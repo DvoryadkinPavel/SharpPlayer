@@ -16,7 +16,6 @@ namespace SharpPlayer
         [UI] private Button _buttonOpen = null;
         [UI] private Scrollbar _scroll = null;
         private AudioPlayer _player;
-        private float _currentVolume;
 
         public MainWindow() : this(new Builder("MainWindow.glade")) { }
 
