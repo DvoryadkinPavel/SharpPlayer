@@ -10,6 +10,7 @@ namespace SharpPlayer
 {
     class MainWindow : Window
     {
+        [UI] private Fixed _fixed = null;
         [UI] private Label _labelFileName = null;
         [UI] private Label _timePosition = null;
         [UI] private Button _buttonPlay = null;
@@ -17,6 +18,8 @@ namespace SharpPlayer
         [UI] private Button _buttonStop = null;
         [UI] private Button _buttonOpen = null;
         [UI] private Scrollbar _scroll = null;
+        [UI] private TreeView _treeView = null;
+        [UI] private TreeStore treestore = null;
         private AudioPlayer _player;
         private List<string> _playlist;
         private int _currentIndex;
@@ -34,7 +37,22 @@ namespace SharpPlayer
             _buttonStop.Clicked += ButtonStop_Clicked;
             _buttonOpen.Clicked += ButtonOpen_Clicked;
             _scroll.ChangeValue += Scrollbar_Changed;
-            new Task(()=>Scrollbar_Update()).Start();
+            new Task(()=>Scrollbar_Update()).Start();   
+            _treeView = new TreeView();
+            _treeView.RowActivated += OnRowActivated;
+            TreeViewColumn listOfFiles = new TreeViewColumn();
+            listOfFiles.Title = "Список воспроизведения";
+            treestore = new TreeStore(typeof(string));  
+            CellRendererText cell = new CellRendererText();
+            listOfFiles.PackStart(cell, true);
+            listOfFiles.AddAttribute(cell, "text", 0);
+            treestore = new TreeStore(typeof(string));  
+            _treeView.AppendColumn(listOfFiles);
+            _treeView.Model = treestore;
+            _treeView.MarginLeft = 10;
+            _treeView.MarginTop = 110;
+            _fixed.Add(_treeView);
+            _fixed.ShowAll();
         }
 
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
@@ -74,15 +92,17 @@ namespace SharpPlayer
         }
         private void ButtonPlay_Clicked(object sender, EventArgs a)
         {
-            if(_labelFileName.Text != "Выберете файл") _player.Play();
+            if(_player != null) _player.Play();
+            _isPlaying = true;
         }
         private void ButtonPause_Clicked(object sender, EventArgs a)
         {
-            if(_labelFileName.Text != "Выберете файл") _player.Pause();
+            if(_player != null) _player.Pause();
+            _isPlaying = true;
         }
         private void ButtonStop_Clicked(object sender, EventArgs a)
         {
-            if(_labelFileName.Text != "Выберете файл") _player.Stop();
+            if(_player != null) _player.Stop();
             _isPlaying = false;
         }
         private void ButtonOpen_Clicked(object sender, EventArgs a)
@@ -104,6 +124,11 @@ namespace SharpPlayer
                 new Task(() => LoadFile(_playlist.First())).Start();
                 _currentIndex = 0;
                 fcd.Dispose ();
+                treestore.Clear();
+                foreach(var item in _playlist)
+                {
+                    treestore.AppendValues(item); 
+                }
             }
 			
 
@@ -118,7 +143,7 @@ namespace SharpPlayer
                     if(_isPlaying && _player.IsStopped && (_currentIndex < (_playlist.Count-1)))
                     {
                         _currentIndex++;
-                        LoadFile(_playlist.ElementAt(_currentIndex));
+                        new Task(() => LoadFile(_playlist.ElementAt(_currentIndex))).Start();
                     }        
                     var position = _player.Position; 
                     _scroll.Adjustment.Value = position;                    
@@ -142,5 +167,17 @@ namespace SharpPlayer
         {
             return (int)(input - (Minutes(input)*60));
         }
+        void OnRowActivated (object sender, RowActivatedArgs args) 
+        {
+    
+            TreeView view = (TreeView) sender;   
+            _currentIndex = Convert.ToInt32(args.Args[0].ToString());
+            if(_player != null)
+            {
+                _player.Stop();
+                _player = null;
+            }
+            new Task(() => LoadFile(_playlist.ElementAt(_currentIndex))).Start();      
+        }   
     }
 }
