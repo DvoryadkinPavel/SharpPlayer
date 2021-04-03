@@ -71,7 +71,7 @@ namespace AudioEngine
             {
                 _sound.PlayingOffset = Time.FromSeconds(value);
             }
-        }
+        }        
         public float Volume
         {
             get

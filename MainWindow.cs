@@ -9,6 +9,7 @@ namespace SharpPlayer
     class MainWindow : Window
     {
         [UI] private Label _labelFileName = null;
+        [UI] private Label _timePosition = null;
         [UI] private Button _buttonPlay = null;
         [UI] private Button _buttonPause = null;
         [UI] private Button _buttonStop = null;
@@ -28,7 +29,7 @@ namespace SharpPlayer
             _buttonPause.Clicked += ButtonPause_Clicked;
             _buttonStop.Clicked += ButtonStop_Clicked;
             _buttonOpen.Clicked += ButtonOpen_Clicked;
-            _scroll.ValueChanged += Scrollbar_Changed;
+            _scroll.ChangeValue += Scrollbar_Changed;
             new Task(()=>Scrollbar_Update()).Start();
         }
 
@@ -58,6 +59,8 @@ namespace SharpPlayer
                     _scroll.Show();
                 }
                 _labelFileName.Text = fileName;
+                _scroll.SetRange(0,_player.Duration);
+                _player.Play();
             }
             catch(Exception ex)
             {
@@ -78,7 +81,7 @@ namespace SharpPlayer
         }
         private void ButtonOpen_Clicked(object sender, EventArgs a)
         {
-            Gtk.FileChooserDialog fcd = new Gtk.FileChooserDialog ("Open File", null, Gtk.FileChooserAction.Open);
+            Gtk.FileChooserDialog fcd = new Gtk.FileChooserDialog ("Выберете файл", null, Gtk.FileChooserAction.Open);
 			fcd.AddButton (Gtk.Stock.Cancel, Gtk.ResponseType.Cancel);
 			fcd.AddButton (Gtk.Stock.Open, Gtk.ResponseType.Ok);
 			fcd.DefaultResponse = Gtk.ResponseType.Ok;
@@ -103,11 +106,12 @@ namespace SharpPlayer
             while(true)
             {
                 if((_player != null) && (_player.Duration != 0))
-                {
-                    _scroll.SetRange(0,_player.Duration);
-                    _scroll.Adjustment.Value = _player.Position;                    
+                {             
+                    var position = _player.Position; 
+                    _scroll.Adjustment.Value = position;                    
+                    _timePosition.Text = $"{Minutes(position).ToString("00")}:{Seconds(position).ToString("00")}";
                 }
-                System.Threading.Thread.Sleep(500);
+                System.Threading.Thread.Sleep(1000);
             }
         }
         private void Scrollbar_Changed(object sender, EventArgs a)
@@ -116,6 +120,14 @@ namespace SharpPlayer
             {
                 _player.Position = (float)_scroll.Adjustment.Value;                    
             }
+        }
+        private int Minutes(double input)
+        {
+            return (int)(input/60);
+        }
+        private int Seconds(double input)
+        {
+            return (int)(input - (Minutes(input)*60));
         }
     }
 }
