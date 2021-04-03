@@ -114,7 +114,6 @@ namespace SharpPlayer
         {            
             if(_player != null)
             {
-                _scroll.SetRange(0,_player.Duration);
                 _player.Position = (float)_scroll.Adjustment.Value;                    
             }
         }
