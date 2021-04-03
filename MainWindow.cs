@@ -168,9 +168,7 @@ namespace SharpPlayer
             return (int)(input - (Minutes(input)*60));
         }
         void OnRowActivated (object sender, RowActivatedArgs args) 
-        {
-    
-            TreeView view = (TreeView) sender;   
+        { 
             _currentIndex = Convert.ToInt32(args.Args[0].ToString());
             if(_player != null)
             {
