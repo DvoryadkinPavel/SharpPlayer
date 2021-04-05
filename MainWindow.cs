@@ -71,7 +71,7 @@ namespace SharpPlayer
                     _buttonPlay.Hide();
                     _buttonStop.Hide();
                     _scroll.Hide();
-                    _labelFileName.Text = "Конвертация MP3 в OGG";                    
+                    _labelFileName.Text = "Конвертация MP3 в WAV";                    
                     _player.MP3Loading.Wait();
                     _player.OpenBuffer();
                     _buttonOpen.Show();

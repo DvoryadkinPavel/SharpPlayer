@@ -30,7 +30,7 @@ namespace AudioEngine
         }
         public void OpenBuffer()
         {
-            _buffer = new SoundBuffer("buffer.ogg");
+            _buffer = new SoundBuffer("buffer.wav");
             _sound = new Sound();
             _sound.SoundBuffer = _buffer;   
         }
@@ -38,7 +38,7 @@ namespace AudioEngine
         {
             var pi = new ProcessStartInfo("/bin/bash")
             {
-                Arguments = $"-y -i \"{fileName}\" buffer.ogg",
+                Arguments = $"-y -i \"{fileName}\" buffer.wav",
                 WorkingDirectory = _directory,
                 FileName = "ffmpeg",
                 Verb = "OPEN",
