@@ -59,7 +59,7 @@ namespace SharpPlayer
         {
             Application.Quit();
         }
-        private void LoadFile(string fileName = "audio.wav")
+        private void LoadFile(string fileName)
         {
             try
             {
@@ -129,9 +129,7 @@ namespace SharpPlayer
                 {
                     treestore.AppendValues(item); 
                 }
-            }
-			
-
+            }	
         }
         private void Scrollbar_Update()
         {
@@ -167,7 +165,7 @@ namespace SharpPlayer
         {
             return (int)(input - (Minutes(input)*60));
         }
-        void OnRowActivated (object sender, RowActivatedArgs args) 
+        private void OnRowActivated (object sender, RowActivatedArgs args) 
         { 
             _currentIndex = Convert.ToInt32(args.Args[0].ToString());
             if(_player != null)

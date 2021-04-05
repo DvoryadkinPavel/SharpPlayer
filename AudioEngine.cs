@@ -8,10 +8,17 @@ namespace AudioEngine
 {
     public class AudioPlayer
     {
+        /// <summary>
+        /// Процесс конвертации MP3
+        /// </summary>
         public Task MP3Loading;
         private string _directory;
         private SoundBuffer _buffer;
         private Sound _sound;
+        /// <summary>
+        /// Аудио проигрыватель
+        /// </summary>
+        /// <param name="fileName">имя файла</param>
         public AudioPlayer(string fileName)
         {
             _fileName = fileName;
@@ -28,6 +35,9 @@ namespace AudioEngine
             }
             
         }
+        /// <summary>
+        /// Открытие временного файла
+        /// </summary>
         public void OpenBuffer()
         {
             _buffer = new SoundBuffer("buffer.wav");
@@ -53,6 +63,9 @@ namespace AudioEngine
             MP3Loading = p.WaitForExitAsync();     
         }
         private string _fileName;
+        /// <summary>
+        /// Длительность в секундах
+        /// </summary>
         public float Duration
         {
             get
@@ -61,6 +74,9 @@ namespace AudioEngine
                 else return 0;
             }
         }
+        /// <summary>
+        /// Текущая позиция в секундах
+        /// </summary>
         public float Position
         {
             get
@@ -71,18 +87,10 @@ namespace AudioEngine
             {
                 _sound.PlayingOffset = Time.FromSeconds(value);
             }
-        }        
-        public float Volume
-        {
-            get
-            {
-                return _sound.Volume;
-            }
-            set
-            {
-                _sound.Volume = value;
-            }
-        }
+        }   
+        /// <summary>
+        /// Начать воспроизведение
+        /// </summary>
         public void Play()
         {            
             if(!IsPlaying)
@@ -90,6 +98,9 @@ namespace AudioEngine
                 _sound.Play();
             }
         }
+        /// <summary>
+        /// Поставить на паузу
+        /// </summary>
         public void Pause()
         {
             if(!IsPaused)
@@ -97,10 +108,16 @@ namespace AudioEngine
                 _sound.Pause();
             }
         }
+        /// <summary>
+        /// Остановить воспроизведение
+        /// </summary>
         public void Stop()
         {
             _sound.Stop();
         }
+        /// <summary>
+        /// Воспроизводится ли
+        /// </summary>
         public bool IsPlaying
         {
             get
@@ -112,6 +129,9 @@ namespace AudioEngine
                 return false;
             }
         }
+        /// <summary>
+        /// На паузе ли
+        /// </summary>
         public bool IsPaused
         {
             get
@@ -123,6 +143,9 @@ namespace AudioEngine
                 return false;
             }
         }
+        /// <summary>
+        /// Остановлено ли
+        /// </summary>
         public bool IsStopped
         {
             get
